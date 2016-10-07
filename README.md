@@ -2,6 +2,26 @@
 
 A(n opinionated) summary of functional programming features in JavaScript
 
+## Why functional programming?
+Functional programming glossaries contain a large number of large words, but at its core, the essence of FP is really very simple; programs are built mostly with a handful of very small, very reusable, very predictable pure functions.
+
+Pure functions have a few properties that make them extremely reusable and extremely useful for a variety of applications:
+
+### Idempotence: 
+Given the same inputs, a pure function will always return the same output, regardless of the number of times the function is called. This also serves the very useful purpose of separating computation from dependency on both time and order of operations.
+
+### Free from side-effects
+Pure functions can be safely applied with no side-effects, meaning that they do not mutate any shared state or mutable arguments, and other than their return value, they don’t produce any observable output.
+
+### Reactive programming 
+Uses functional utilities like map, filter, and reduce to create and process data flows which propogate changes through the system: hence, reactive. When input x changes, output y updates _automatically_ in response.
+
+## Lists
+Lists of data to manipulate
+
+## Streams
+Streams are simply lists expressed over time.
+
 ## First class functions
 
 ## Higher-order functions
