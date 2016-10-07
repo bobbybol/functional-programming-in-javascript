@@ -2,7 +2,9 @@
 
 A(n opinionated) summary of functional programming features in JavaScript
 
-## ES6 native higher-order functions
+## First class functions
+
+## Higher-order functions
 
 ### Filter
 
@@ -38,3 +40,6 @@ var counter = function counter() {
     };
 };
 ```
+
+## Simple lamba syntax
+
