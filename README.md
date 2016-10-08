@@ -2,7 +2,20 @@
 
 A(n opinionated) summary of functional programming features in JavaScript
 
-## Why functional programming?
+## What is functional programming?
+There's a lot of complex explanations out there, and it's hard to capture all that functional programming _is_, but as the purpose of this document is to communicate ideas clearly and in simple terms, I'll start with a simple list of what functional programming has come to mean to me:
+- juggling functions around:
+  - passing functions as arguments to other functions
+  - functions returning other functions
+- keeping it DRY:
+  - replacing repetitive logic with a simple function
+  - largely eliminating the need for `for` loops
+- letting go of code micromanagement:
+  - working on streams of data rather than discrete data
+  - a
+- writing code that's easy for others to read and reason about
+
+## Why do we want functional programming?
 Functional programming glossaries contain a large number of large words, but at its core, the essence of FP is really very simple; programs are built mostly with a handful of very small, very reusable, very predictable pure functions.
 
 Pure functions have a few properties that make them extremely reusable and extremely useful for a variety of applications:
