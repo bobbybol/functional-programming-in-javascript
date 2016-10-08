@@ -16,6 +16,10 @@ There's a lot of complex explanations out there, and it's hard to capture all th
 - writing code that's easy for others to read and reason about
 
 ## Why do we want functional programming?
+Simply put, mastering functional programming will let you write your code with less bugs, in less time.
+Less bugs because your code is easier to reason about.
+Less time because you will be able to re-use more of your code.
+
 Functional programming glossaries contain a large number of large words, but at its core, the essence of FP is really very simple; programs are built mostly with a handful of very small, very reusable, very predictable pure functions.
 
 Pure functions have a few properties that make them extremely reusable and extremely useful for a variety of applications:
@@ -36,8 +40,21 @@ Lists of data to manipulate
 Streams are simply lists expressed over time.
 
 ## First class functions
+Functions are values.
+```javascript
+var quadruple = function (x) {
+    return x * 4;
+};
+```
 
 ## Higher-order functions
+
+
+
+
+
+
+
 
 ### Filter
 
