@@ -48,15 +48,15 @@ var quadruple = function (x) {
 ```
 
 ## Higher-order functions
+Because functions are values in JavaScript, they can be passed to other functions. These functions we call 'higher-order functions'. Higher-order functions are useful because you can essentially create a number of small, simple, easy-to-reason-about functions the can be **composed** into bigger functions to create more complex functionality.
 
-
-
-
-
-
-
+JavaScript has some very useful higher-order functions built-in:
 
 ### Filter
+Filter is very simple and extremely useful. 
+Filter is a function on the array.
+Filter accepts another function as its argument.
+Filter will use the other function to return a new, filtered version of the array.
 
 ### Map
 
