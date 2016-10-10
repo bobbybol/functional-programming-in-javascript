@@ -87,7 +87,7 @@ let tigers = felines.filter(function(feline) {
 // find tigers
 // and we can even break up the code to make it more reusable
 let isTiger = function(feline) {
-  // the isTiger function returns true if we find atiger
+  // the isTiger function returns true if we pass it atiger
   return feline.subspecies === 'atiger'
 }
 
