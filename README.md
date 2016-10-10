@@ -69,12 +69,19 @@ let felines = [
   { name: 'ugo', subspecies: 'akittycat' }
 ]
 
-// find dogs with a for loop
+// find tigers
+// with a for loop
 let tigers = [];
 for (let i = 0; i < felines.length; i++) {
   if (felines[i].subspecies === 'atiger') {
     tigers.push(felines[i]);
   }
+}
+
+// find tigers
+// with the filter function
+let tigers = felines.filter(function(feline) {
+  return feline.subspecies === 'atiger';
 }
 ```
 
