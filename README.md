@@ -70,7 +70,7 @@ let felines = [
 ]
 
 // find tigers
-// with a for loop
+// we could do it with a for loop
 let tigers = [];
 for (let i = 0; i < felines.length; i++) {
   if (felines[i].subspecies === 'atiger') {
@@ -79,10 +79,19 @@ for (let i = 0; i < felines.length; i++) {
 }
 
 // find tigers
-// with the filter function
+// but with the filter function it takes less code
 let tigers = felines.filter(function(feline) {
   return feline.subspecies === 'atiger';
 }
+
+// find tigers
+// and we can even break up the code to make it more reusable
+let isTiger = function(feline) {
+  // the isTiger function returns true if we find atiger
+  return feline.subspecies === 'atiger'
+}
+
+let tigers = felines.filter(isTiger);
 ```
 
 ### Map
