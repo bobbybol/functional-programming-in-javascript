@@ -43,7 +43,7 @@ Streams are simply lists expressed over time.
 Functions are values.
 ```javascript
 var quadruple = function (x) {
-    return x * 4;
+  return x * 4;
 };
 ```
 
@@ -58,6 +58,26 @@ Filter is a function on the array.
 Filter accepts another function as its argument.
 Filter will use the other function to return a new, filtered version of the array.
 
+```javascript
+let felines = [
+  { name: 'mufasa', subspecies: 'alion' },
+  { name: 'shere khan', subspecies: 'atiger' },
+  { name: 'hobbes', subspecies: 'atiger' },
+  { name: 'dassler', subspecies: 'apuma' },
+  { name: 'adestra', subspecies: 'alynx' },
+  { name: 'lumachina', subspecies: 'acheetah' },
+  { name: 'ugo', subspecies: 'akittycat' }
+]
+
+// find dogs with a for loop
+let tigers = [];
+for (let i = 0; i < felines.length; i++) {
+  if (felines[i].subspecies === 'atiger') {
+    tigers.push(felines[i]);
+  }
+}
+```
+
 ### Map
 
 ### Reduce
@@ -67,8 +87,8 @@ First we'll be exploring the higher-order functions native to JavaScript.
 ```javascript
 
 if (true){
-    let favoriteColor = "red";
-    return "oh no it's bluuuuuuueeeeeeeeeeeeeeee...";
+  let favoriteColor = "red";
+  return "oh no it's bluuuuuuueeeeeeeeeeeeeeee...";
 }
 
 ```
@@ -79,15 +99,15 @@ Like objects, closures are a mechanism for containing state. In JavaScript, a cl
 You can use closures to create data privacy in JavaScript using a factory function:
 ```javascript
 var counter = function counter() {
-    var count = 0;
-    return {
-        getCount: function getCount() {
-            return count;
-        },
-        increment: function increment() {
-            count += 1;
-        }
-    };
+  var count = 0;
+  return {
+    getCount: function getCount() {
+      return count;
+    },
+    increment: function increment() {
+      count += 1;
+    }
+  };
 };
 ```
 
