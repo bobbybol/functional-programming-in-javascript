@@ -53,7 +53,7 @@ Because functions are values in JavaScript, they can be passed to other function
 JavaScript has some very useful higher-order functions built-in:
 
 ### Filter
-Filter is a very simple and useful function; it can be called on an array and will return a filtered version of that array. Filter accepts another function as its argument: when this function returns true while iterating over an element of the array, this element is pushed into a new array. If the function returns false, the current array element is ignored.
+Filter is a very simple and useful function; it can be called on an array and will return a filtered version of that array. Filter accepts another function as its argument: when this callback function returns `true` while iterating over an element of the array, that element is pushed into a new array. If the function returns false, the current array element is ignored.
 
 ```javascript
 let felines = [
