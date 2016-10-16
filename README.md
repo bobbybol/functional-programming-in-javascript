@@ -64,7 +64,7 @@ let felines = [
   { name: 'adestra', subspecies: 'alynx' },
   { name: 'lumachina', subspecies: 'acheetah' },
   { name: 'ugo', subspecies: 'akittycat' }
-]
+];
 
 // find tigers
 // we could do it with a for loop
@@ -79,14 +79,14 @@ for (let i = 0; i < felines.length; i++) {
 // but with the filter function it takes less code
 let tigers = felines.filter(function(feline) {
   return feline.subspecies === 'atiger';
-}
+};
 
 // find tigers
 // and we can even break up the code to make it more reusable
 let isTiger = function(feline) {
   // the isTiger function returns true if we pass it atiger
   return feline.subspecies === 'atiger'
-}
+};
 
 let tigers = felines.filter(isTiger);
 ```
@@ -103,7 +103,7 @@ let felines = [
   { name: 'adestra', subspecies: 'alynx' },
   { name: 'lumachina', subspecies: 'acheetah' },
   { name: 'ugo', subspecies: 'akittycat' }
-]
+];
 
 // find all felines' names
 // we could do it with a for loop
@@ -123,19 +123,31 @@ let names = felines.map(function(feline) {
 let names = felines.map((x) => x.name);
 ```
 
-
-
 ### Reduce
+Where filter and map (and find and reject) are very specific about the way they transform a list of items, _reduce_ can be considered to be the 'multitool' of list transformations. In it's most common application, the reduce method reduces the array to a single value. The reduce method executes a provided function for each value of the array (from left-to-right). The return value of the function is stord in an accumulator (result/total).
+**Note that we have to pass a second argument to the reduce method (besides the callback function), which is the initial value.**
 
-First we'll be exploring the higher-order functions native to JavaScript.
+**Also note that now the callback function takes additional arguments as well, where the first argument is actually the total of the items being 'reduced', and the _second_ argument is the item in the array currently being iterated over.**
 
 ```javascript
+let observedAlions = [
+  { day: 'mon', amount: 19 },
+  { day: 'tue', amount: 20 },
+  { day: 'wed', amount: 31 },
+  { day: 'thu', amount: 40 },
+  { day: 'fri', amount: 11 }
+];
 
-if (true){
-  let favoriteColor = "red";
-  return "oh no it's bluuuuuuueeeeeeeeeeeeeeee...";
+// add all observations to a single total amount
+// we could do it with a for loop
+let totalObservations = 0;
+for (let i = 0; i < observedAlions.length; i++) {
+  totalObservations += orders[i].amount;
 }
 
+let totalObservations = observedAlions.reduce(function(sum, dailyRecord){
+  return sum + dailyRecord.amount;
+}, 0);
 ```
 
 ## Closures
