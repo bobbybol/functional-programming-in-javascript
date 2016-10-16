@@ -92,6 +92,38 @@ let tigers = felines.filter(isTiger);
 ```
 
 ### Map
+Map is another higher-order function that works on the array. Unlike filter, map doesn't throw any of the original array's elements away, instead it transforms them. Map creates a new array with the results of calling a function for every array element. The map method calls the provided function once for each element in an array, in order.
+
+```javascript
+let felines = [
+  { name: 'mufasa', subspecies: 'alion' },
+  { name: 'shere khan', subspecies: 'atiger' },
+  { name: 'hobbes', subspecies: 'atiger' },
+  { name: 'dassler', subspecies: 'apuma' },
+  { name: 'adestra', subspecies: 'alynx' },
+  { name: 'lumachina', subspecies: 'acheetah' },
+  { name: 'ugo', subspecies: 'akittycat' }
+]
+
+// find all felines' names
+// we could do it with a for loop
+let namess = [];
+for (let i = 0; i < felines.length; i++) {
+  names.push(animals[i].name);
+}
+
+// find all felines' names
+// with the map method (much shorter!)
+let names = felines.map(function(feline) {
+  return feline.name;
+});
+
+// find all felines' names
+// with es6 arrow functions (even shorter!)
+let names = felines.map((x) => x.name);
+```
+
+
 
 ### Reduce
 
