@@ -157,10 +157,23 @@ Reduce is not limited to reducing a list to a number, it can reduce it to anythi
 ## Closures
 Like objects, closures are a mechanism for containing state. In JavaScript, a closure is created whenever a function accesses a variable defined outside the immediate function scope. It’s easy to create closures: Simply define a function inside another function, and expose the inner function, either by returning it, or passing it into another function. The variables used by the inner function will be available to it, even after the outer function has finished running.
 
+The simplest example of a closure uses a global variable outside its own scope:
+```javascript
+let outer = 10;
+
+function innerPlusOuter() {
+  let inner = 11;
+  return outer + inner;
+}
+```
+Where innerPlusOuter is using outer to close its own scope.
+
+> Closures are nothing but **functions with _preserved data_**
+
 You can use closures to create data privacy in JavaScript using a factory function:
 ```javascript
-var counter = function counter() {
-  var count = 0;
+let counter = function counter() {
+  let count = 0;
   return {
     getCount: function getCount() {
       return count;
