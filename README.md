@@ -125,6 +125,7 @@ let names = felines.map((x) => x.name);
 
 ### Reduce
 Where filter and map (and find and reject) are very specific about the way they transform a list of items, _reduce_ can be considered to be the 'multitool' of list transformations. In it's most common application, the reduce method reduces the array to a single value. The reduce method executes a provided function for each value of the array (from left-to-right). The return value of the function is stord in an accumulator (result/total).
+
 **Note that we have to pass a second argument to the reduce method (besides the callback function), which is the initial value.**
 
 **Also note that now the callback function takes additional arguments as well, where the first argument is actually the total of the items being 'reduced', and the _second_ argument is the item in the array currently being iterated over.**
@@ -145,10 +146,13 @@ for (let i = 0; i < observedAlions.length; i++) {
   totalObservations += orders[i].amount;
 }
 
+// the following demonstrates how reduce reduces an array to a single number:
 let totalObservations = observedAlions.reduce(function(sum, dailyRecord){
   return sum + dailyRecord.amount;
 }, 0);
 ```
+
+Reduce is not limited to reducing a list to a number, it can reduce it to anything, such as another array, or an object. 
 
 ## Closures
 Like objects, closures are a mechanism for containing state. In JavaScript, a closure is created whenever a function accesses a variable defined outside the immediate function scope. It’s easy to create closures: Simply define a function inside another function, and expose the inner function, either by returning it, or passing it into another function. The variables used by the inner function will be available to it, even after the outer function has finished running.
