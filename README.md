@@ -185,5 +185,8 @@ let counter = function counter() {
 };
 ```
 
+## Partial application vs. Currying
+
+
 ## Simple lamba syntax
 
