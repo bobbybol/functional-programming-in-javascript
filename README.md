@@ -189,9 +189,30 @@ let counter = function counter() {
 
 ## Recursion
 A pretty interesting example of functions calling other functions is recursion - where a function calls _itself_.
-The function keeps calling itself, until it doesn't; meaning that there must be 'exit strategy' to stop the function from calling itself infinitely.
+The function keeps calling itself, until it doesn't; meaning that there must be an 'exit strategy' to stop the function from calling itself indefinitely.
 
+```javascript
+// Let's create a function that counts down from the number passed as its argument.
+// So `countDownFrom(10)` would output
+// 10
+// 9
+// 8
+// ...
+// 1
 
+let countDownFrom = (number) => {
+  // Exit strategy first..
+  if (number === 0) {
+    return;
+  }
+  
+  // ..then just output number..
+  console.log(number);
+  
+  // ..and call on `countDownFrom` again with a changed argument
+  countDownFrom(number - 1);
+};
+```
 
 ## Simple lamba syntax
 
