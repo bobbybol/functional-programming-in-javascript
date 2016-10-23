@@ -214,5 +214,55 @@ let countDownFrom = (number) => {
 };
 ```
 
+### Why is recursion useful?
+Every time you use a `for` loop, you could potentially use recursion instead.
+But it doesn't work the other way around because there are things that recursion can do that loops cannot.
+
+## Promises
+We all know callbacks, which say: "when **this** thing is done, execute **that** piece of code."
+Promises serve that same purpose, but promises are a bit more powerful, because they are _composable_.
+
+A very basic promise:
+```javascript
+import loadImagePromised
+from './load-image-promised';
+
+// `whenImageLoaded` is a promise
+let whenImageLoaded = loadImagePromised('images/a-cute-lion.png');
+
+// When the promise is fulfilled, THEN execute the callback function
+whenImageLoaded.then( (img) => {
+  // The callback function creates an element..
+  let imgElement = document.createElement("IMG");
+  
+  // ..and sets the source of the element to the image loaded..
+  imgElement.src = img.src;
+  
+  // ..and appends the element to the body.
+  document.body.appendChild(imgElement);
+});
+```
+
+ECMAScript 6 supports promises natively:
+```javascript
+function loadImage(url) {
+  return new Promise((resolve, reject) => {
+    let image = new Image();
+    
+    image.onload = function() {
+      resolve(image);
+    };
+    
+    image.onerror = function() {
+      let message = 'Could not load image at ' + url;
+      reject(new Error(message);
+    };
+    
+    image.src = url;
+    
+  });
+}
+```
+
 ## Simple lamba syntax
 
