@@ -224,11 +224,10 @@ Promises serve that same purpose, but promises are a bit more powerful, because 
 
 A very basic promise:
 ```javascript
-import loadImagePromised
-from './load-image-promised';
+import loadImage from './load-image';
 
 // `whenImageLoaded` is a promise
-let whenImageLoaded = loadImagePromised('images/a-cute-lion.png');
+let whenImageLoaded = loadImage('images/a-cute-lion.png');
 
 // When the promise is fulfilled, THEN execute the callback function
 whenImageLoaded.then( (img) => {
