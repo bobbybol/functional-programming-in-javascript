@@ -187,6 +187,11 @@ let counter = function counter() {
 
 ## Partial application vs. Currying
 
+## Recursion
+A pretty interesting example of functions calling other functions is recursion - where a function calls _itself_.
+The function keeps calling itself, until it doesn't; meaning that there must be 'exit strategy' to stop the function from calling itself infinitely.
+
+
 
 ## Simple lamba syntax
 
