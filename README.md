@@ -38,6 +38,15 @@ Lists of data to manipulate
 
 ## Streams
 Streams are simply lists expressed over time.
+This means that there is not a set amount of data values, rather it is a flow of values, and these values can arrive whenever they feel like.
+
+In JavaScript, a straightforward explanation of a Stream is a cross between an `Array` and a Promise.
+If you take..
+- an `Array` as a series of multiple objects that are already present
+- a Promise as a _notion_ of a single object that might be there eventually
+..then the Stream is the Array that grows over time as data values are added to it.
+
+Besides using Streams as a way to handle data, another use-case is front-end programming, where things such as keyboard input or mouse movements
 
 ## First class functions
 Functions are values.
