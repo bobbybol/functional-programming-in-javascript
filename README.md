@@ -46,7 +46,7 @@ If you take..
 - a Promise as a _notion_ of a single object that might be there eventually
 ..then the Stream is the Array that grows over time as data values are added to it.
 
-Besides using Streams as a way to handle data, another use-case is front-end programming, where things such as keyboard input or mouse movements
+Besides using Streams as a way to model data, another use-case is front-end programming, where things such as keyboard input or mouse movements can be modeled as streams of events. You attach functions as handlers at the end of these streams, and these usually end up manipulating the 'application state', and in turn the 'application state' is also implemented as a stream so you have other parts of the application, often the _render_ function, listening to the 'state' and rendering whenever the 'state' changes.
 
 ## First class functions
 Functions are values.
